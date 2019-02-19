@@ -15,11 +15,12 @@
 
 DATABASES = {
     "default": {
-        "TYPE": "SSDB",  # TYPE SSDB/MONGODB if use redis, only modify the host port, the type should be SSDB
+        "TYPE": "MONGODB",  # TYPE SSDB/MONGODB if use redis, only modify the host port, the type should be SSDB
         "HOST": "127.0.0.1",
-        "PORT": 8888,
+        "PORT": 37017,
         "NAME": "proxy",
-        "PASSWORD": ""
+        "USERNAME": "root",
+        "PASSWORD": "root"
 
     }
 }
@@ -45,10 +46,9 @@ PROXY_GETTER = [
     "freeProxyWallThird"
 ]
 
-
 # # API config http://127.0.0.1:5010
 
 SERVER_API = {
-    "HOST": "0.0.0.0",  # The ip specified which starting the web API
+    "HOST": "127.0.0.1",  # The ip specified which starting the web API
     "PORT": 5010  # port number to which the server listens to
 }
